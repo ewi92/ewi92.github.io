@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ewi92 Photography</title>
+    <meta
+      name="description"
+      content="Photography portfolio featuring selected work, story, and contact details."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f4f2;
+        --text: #1d1d1b;
+        --muted: #5e5e59;
+        --card: #ffffff;
+        --border: #dfdfdb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.5;
+      }
+
+      .container {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 2rem 1rem 4rem;
+      }
+
+      header {
+        padding: 3.5rem 0 2rem;
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+      }
+
+      .intro {
+        margin-top: 1rem;
+        max-width: 42rem;
+        color: var(--muted);
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+        margin: 1.5rem 0 3rem;
+      }
+
+      .photo {
+        margin: 0;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .photo img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .photo figcaption {
+        padding: 0.75rem 0.9rem;
+        font-size: 0.95rem;
+      }
+
+      .about,
+      .contact {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1.25rem;
+        margin-top: 1rem;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      footer {
+        margin-top: 2rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Ewi92 Photography</h1>
+        <p class="intro">
+          Welcome to my photography portfolio. This is a curated collection of portraits,
+          travel moments, and street scenes captured over time.
+        </p>
+      </header>
+
+      <section aria-labelledby="portfolio-heading">
+        <h2 id="portfolio-heading">Selected Work</h2>
+        <div class="gallery">
+          <figure class="photo">
+            <img
+              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80"
+              alt="Mountain landscape with dramatic sky"
+            />
+            <figcaption>Landscape</figcaption>
+          </figure>
+          <figure class="photo">
+            <img
+              src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80"
+              alt="Portrait of a woman in natural light"
+            />
+            <figcaption>Portrait</figcaption>
+          </figure>
+          <figure class="photo">
+            <img
+              src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=1200&q=80"
+              alt="Street at night with city lights"
+            />
+            <figcaption>Street</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About</h2>
+        <p>
+          I am a photographer focused on authentic moments and natural light. Replace this
+          text with your own story and photography style.
+        </p>
+      </section>
+
+      <section class="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <p>
+          For collaborations or bookings, email
+          <a href="mailto:hello@example.com">hello@example.com</a>.
+        </p>
+      </section>
+
+      <footer>© <span id="year"></span> Ewi92 Photography</footer>
+    </main>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
